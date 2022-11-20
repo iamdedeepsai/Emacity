@@ -285,6 +285,7 @@ body {
 #side2 {
     right: 0;
     margin-right: 3.3vw;
+    justify-content: center;
 }
 
 
@@ -350,6 +351,17 @@ lord-icon {
     #image2 {
         width: 20vw;
     }
+}
+
+#quantity {
+    padding: 0.5vw 0.6vw 0.6vw;
+    width: 6vw;
+    min-height: 2.28vw;
+}
+
+#quantity:focus {
+    border: none;
+    outline: none;
 }
 
 #final button {

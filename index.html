@@ -121,13 +121,13 @@
   </div>
 
   <div id="popup">
-    <a onclick="document.getElementById('popup').style.display = 'none'"><lord-icon
+    <a onclick="cls()"><lord-icon
             src="https://cdn.lordicon.com/jfhbogmw.json"
             trigger="hover"
             colors="primary:#121331"
             state="hover-1">
     </lord-icon></a>
-    <form id="form">
+    <form id="form" action="#store">
       <div id="side1" style="grid-area: side1;">
         <select onchange="change()" id="ret" class="button-67">
           <option>AirEm</option>
@@ -140,13 +140,22 @@
         </div>
       </div>
 
+      <!-- todo: add delete button beside items -->
+
       <div id="side2" style="grid-area: side2;" class="side">
         <div id="view">
           <h1 id="model">Model: AirEm</h1>
           <h2 id="cost">Upfront cost: $99</h2>
           <h2 id="sub">Subscription cost: $19/monthly</h2>
+          <label for="quantity">Quantity: </label>
+          <input type="number" class="button-67" id="quantity" value="1">
+          <button type="button" class="button-67" onclick="addNo()" id="add">Add to cart</button>
+
           <div id="final">
-            <button type="submit" class="button-67">Order</button>
+            <h2 id="aem" style="display: none">AirEm ×</h2>
+            <h2 id="wem" style="display: none">WaterEm ×</h2>
+            <h2 id="total" style="display: none">Total cost: </h2>
+            <button type="button" class="button-67" id="order" onclick="ord()" style="display: none">Order</button>
           </div>
         </div>
 
