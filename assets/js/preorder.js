@@ -1,9 +1,20 @@
+let airem = 0;
+let waterem = 0;
+let cost = 0;
+
+let selected = "AirEm";
+
+function cls() {
+    document.getElementById('popup').style.display = 'none'
+}
+
 function change() {
     let e = document.getElementById("ret");
     let text = e.options[e.selectedIndex].text;
 
     switch (text) {
         case "AirEm":
+            selected = "AirEm";
             document.getElementById("image2").style.display = "none";
             document.getElementById("image1").style.display = "block";
 
@@ -12,6 +23,7 @@ function change() {
             document.getElementById("sub").innerText = "Subscription cost: $19/monthly";
             break;
         case "WaterEm":
+            selected = "WaterEm";
             document.getElementById("image1").style.display = "none";
             document.getElementById("image2").style.display = "block";
 
@@ -20,4 +32,48 @@ function change() {
             document.getElementById("sub").innerText = "Subscription cost: $29/monthly";
             break
     }
+}
+
+function addNo(n) {
+    let num = parseInt(document.getElementById(n).value);
+
+    if (isNaN(num)) {
+        return;
+    }
+
+    if (num < 0) {
+        console.log(num <= 0);
+        return;
+    }
+
+    switch (n) {
+        case "quantityA":
+            airem = num;
+            cost = 99 * airem + 149 * waterem;
+            break;
+        case "quantityW":
+            waterem = num;
+            cost = 99 * airem + 149 * waterem;
+            break;
+    }
+
+    document.getElementById('total').innerText = "Total cost: $" + cost;
+}
+
+function ord() {
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/0SJQBMU4880uFYYx/',
+        type:'post',
+        data:$("#form").serializeArray(),
+        success: function(){
+            alert("Form Data Submitted :)")
+        },
+        error: function(){
+            alert("There was an error :(")
+        }
+    });
+    cls();
+    airem = 0;
+    waterem = 0;
+    cost = 0;
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="">
 
 <head>
   <meta charset="utf-8">
@@ -28,6 +28,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script src="assets/js/preorder.js"></script>
+  <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"
+          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+          crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -65,13 +70,12 @@
           <span class="material-symbols-outlined" style="grid-area: icon4">recycling</span>
           <p id="spec3" class="txt" style="grid-area: t3">Portable at only 5kg</p>
           <p id="spec4" class="txt" style="grid-area: t4">Replacable and biodegradable water filter</p>
-          <button class="preorder button-67" onclick="document.getElementById('popup').style.display = 'block'" style="grid-area: btn">Learn more</button>
+          <button class="preorder button-67" onclick="document.getElementById('popup').style.display = 'block'" style="grid-area: btn">Preorder</button>
         </div>
       </div>
     </div>
 
     <div id="waterem">
-      <!-- todo: make preorder page pop-up instead of going to other page -->
       <div class="card">
         <h2 class="tit">WaterEm</h2>
         <img src="assets/waterem.png" style="width: 50%; padding-top: 5%;">
@@ -84,50 +88,48 @@
           <span class="material-symbols-outlined" style="grid-area: icon4">thumb_up</span>
           <p id="spec7" class="txt" style="grid-area: t3">Graphene Oxide Filter membrane.</p>
           <p id="spec8" class="txt" style="grid-area: t4">Filters 99.9% of all contaminants, bacteria and viruses</p>
-          <button class="preorder button-67" onclick="document.getElementById('popup').style.display = 'block'" style="grid-area: btn">Learn more</button>
+          <button class="preorder button-67" onclick="document.getElementById('popup').style.display = 'block'" style="grid-area: btn">Preorder</button>
         </div>
       </div>
     </div>
   </div>
 
   <div id="about">
+    <div id="abt">
+      <div class="titcard" id="b">
+        <h1 style="font-family: 'Fredericka the Great', cursive;">Our vision</h1>
+        <p style="text-align: justify; font-family: Cavalcade,serif; font-size: 20px;">
+          Ever since the start of the 20th century, air and water insecurity has become the elephant in
+          the room for the United Nations and other non-profit organisations. Diseases such as Malaria,
+          Cholera, Typhoid etc have destroyed societies and tormented multiple nations. Cholera affects
+          approximately 2.9 million people yearly, leading to 95,000 deaths worldwide mainly in low- and
+          middle-income countries. In Africa alone, 40 million people live in cholera-endemic areas with
+          a risk of frequent outbreaks. We thus want to find a way to reach out to these rural and
+          undeveloped corners of the world and aid them in getting the same privilege as the average urban
+          individual.</p>
+      </div>
+    </div>
+
     <div id="team">
       <div class="titcard" id="a">
         <h1 style="grid-area: header">Meet the team</h1>
-        <img src="assets/hehehehaw.png" style="width: 96%; grid-area: image; padding: 0% 2%;">
+        <img src="assets/hehehehaw.png" style="width: 96%; grid-area: image; margin: 0% 2%;">
         <p style="grid-area: t1; float: right">Dedeep Sai</p>
         <p style="grid-area: t2">Abhilash Joshi</p>
         <p style="grid-area: t3; float: left">Bhatia Priyansh</p>
       </div>
     </div>
-
-    <div id="abt">
-      <div class="titcard" id="b">
-        <h1 style="font-family: 'Fredericka the Great', cursive;">Our vision</h1>
-        <p style="text-align: justify; font-family: Caladea; font-size: 20px;">
-          Ever since the start of the 20th century, humanity has been making advancements in the fields of
-          science and technology, both to cater to world needs and the satisfaction of consumers. As giants in
-          industries pass the baton to the next generation, the world has started to starve  in search for the
-          next batch of harbingers. But as technological advancements occur, it has now become all the more
-          imperative to have everybody in the world on the same page, including the 3rd world. <b>Air and water
-          insecurity</b> has become the elephant in the room for the United Nations and other non-profit organisations.
-          Diseases such as <b>Malaria, Cholera, Typhoid</b> etc have destroyed societies and tormented multiple nations.
-          Cholera affects approximately <b>2.9 million people</b> yearly, leading to <b>95,000 deaths worldwide</b> mainly in
-          low- and middle-income countries. In Africa alone, 40 million people live in cholera-endemic areas with
-          a risk of frequent outbreaks. We thus want to find a way to reach out to these <b>rural and undeveloped</b>
-          corners of the world and aid them in getting the same privilege as the average urban individual.</p>
-      </div>
-    </div>
   </div>
 
   <div id="popup">
-    <a onclick="document.getElementById('popup').style.display = 'none'"><lord-icon
+    <a onclick="cls()"><lord-icon
+            id="close"
             src="https://cdn.lordicon.com/jfhbogmw.json"
             trigger="hover"
             colors="primary:#121331"
             state="hover-1">
     </lord-icon></a>
-    <form id="form">
+    <form id="form" action="#store">
       <div id="side1" style="grid-area: side1;">
         <select onchange="change()" id="ret" class="button-67">
           <option>AirEm</option>
@@ -140,29 +142,63 @@
         </div>
       </div>
 
+      <!-- todo: add option for subscription -->
+
       <div id="side2" style="grid-area: side2;" class="side">
-        <div id="view">
+        <!-- todo: option for subscription -->
+        <div id="view" class="c">
           <h1 id="model">Model: AirEm</h1>
           <h2 id="cost">Upfront cost: $99</h2>
           <h2 id="sub">Subscription cost: $19/monthly</h2>
-          <div id="final">
-            <button type="submit" class="button-67">Order</button>
+        </div>
+
+        <div id="final" class="c">
+          <label for="quantityA">AirEm:</label>
+          <input name="AirEm" type="number" class="button-67" id="quantityA" placeholder="Quantity" min="0" oninput="addNo('quantityA')">
+
+          <label for="quantityW">WaterEm:</label>
+          <input name="WaterEm" type="number" class="button-67" id="quantityW" placeholder="Quantity" oninput="addNo('quantityW')" min="0">
+
+          <!--<div id="grp1" style="display: none" class="ner">
+            <h2 id="aem">AirEm ×</h2>
+            <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+            <button class="button-67 del" onclick="del('AirEm')"><lord-icon
+                    id="icon-del"
+                    src="https://cdn.lordicon.com/jmkrnisz.json"
+                    trigger="morph"
+                    state="morph-fill">
+            </lord-icon></button>
           </div>
+          <div id="grp2" style="display: none" class="ner">
+            <h2 id="wem">WaterEm ×</h2>
+            <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+            <button class="button-67 del" onclick="del('AirEm')"><lord-icon
+                    id="icon-del"
+                    src="https://cdn.lordicon.com/jmkrnisz.json"
+                    trigger="morph"
+                    state="morph-fill">
+            </lord-icon></button>
+          </div>-->
+
+          <h2 id="total" style="grid-area: cost">Total cost: $0</h2>
+          <label for="email" id="lbEm" >Email:</label>
+          <input name="email" type="email" class="button-67" placeholder="Enter email " id="email" style="grid-area: email;">
+          <button type="button" class="button-67" id="order" onclick="ord()" style="grid-area: order">Order</button>
         </div>
 
 
       </div>
 
       <!--<a class="button-67" onclick="document.getElementById('popup').style.display = 'none'">Close</a>-->
-
-      <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
     </form>
   </div>
 
   <div id="contact">
+    <!-- todo: use better icons -->
+
     <h2 class="text">CONTACT US</h2>
     <p><i class="fa fa-envelope" aria-hidden="true" style="font-size: 110%; grid-area: text1"></i> <a href="mailto: emacitysg@hotmail.com">emacitysg@hotmail.com</a></p>
-    <p><i class="fa fa-phone" aria-hidden="true" style="font-size: 110%; grid-area: text2"></i> <a href="tel: +65 8925 3285">+65 8925 3285</a></p>
+    <p><i class="fa fa-phone" aria-hidden="true" style="font-size: 110%; grid-area: text2"></i> <a href="">+65 8925 3285</a></p>
     <p><i class="fa fa-instagram" style="font-size: 110%; grid-area: text3"></i> <a href="">emacity_sg</a></p>
   </div>
 

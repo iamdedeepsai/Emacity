@@ -1,7 +1,14 @@
-body {
+body, html {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
 }
 
 .topnav {
@@ -54,8 +61,10 @@ body {
 }
 
 .main {
+    margin: auto;
     display: flex;
     align-items: center;
+    width: 70vw;
 }
 
 #tag {
@@ -63,11 +72,9 @@ body {
     font-family: 'Big Shoulders Text', cursive;
     font-size: 9vw;
     width: 20%;
-    padding-left: 1em;
 }
 
 #img {
-    padding: 5em;
     width: 40%;
 }
 
@@ -139,12 +146,17 @@ body {
 
 #contact p {
     text-align: center;
-    padding-right: 30%;
+    margin-right: 5vw;
 }
 
 #contact p a {
     color: white;
+}
 
+@media screen and (max-width: 600px) {
+    #contact p a {
+         display: none;
+    }
 }
 
 .text {
@@ -165,12 +177,13 @@ body {
     background-color: rgba(200, 200, 200, 0.1);
     box-shadow: 0px 6px 20px rgb(0 0 0 / 0.2);
     padding: 1em 1em;
-
 }
 
 #team {
+    font-family: 'Fredericka the Great', cursive;
     display: flex;
     justify-content: center;
+    align-content: center;
     padding: 0em 3em 5em 3em;
 }
 
@@ -178,6 +191,10 @@ body {
     display: flex;
     justify-content: center;
     padding: 0em 3em 5em 3em;
+}
+
+#abt p {
+    padding: 0 3vw;
 }
 
 #a {
@@ -284,12 +301,17 @@ body {
 
 #side2 {
     right: 0;
-    margin-right: 3.3vw;
+    margin-right: 4vw;
+    justify-content: center;
+    font-family: "JetBrains Mono", monospace;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 6vh;
 }
 
 
 #ret {
-    margin-top: 1.2vw;
+    margin-top: 1.8vw;
     padding: 0.5vw 1vw;
     width: 80%;
 }
@@ -309,7 +331,7 @@ select#ret {
     margin-left: 2vw;
 }
 
-lord-icon {
+#close {
     position: absolute;
     top: 0;
     right: 0;
@@ -318,13 +340,14 @@ lord-icon {
 }
 
 @media screen and (min-width: 1200px) {
-    lord-icon {
+    #close {
         width: 6vh;
         height: 6vh;
     }
 }
 
 #view {
+    margin-top: 3.5vh;
     transition-duration: 3s;
 }
 
@@ -352,6 +375,72 @@ lord-icon {
     }
 }
 
-#final button {
+#popup input {
+    padding: 0.5vw 0.6vw 0.6vw;
+    width: 100%;
+    min-height: 2.28vw;
+}
+
+#popup input:focus {
+    border: none;
+    outline: none;
+}
+
+#order {
     width: 100%;
 }
+
+label {
+    position: relative;
+    top: 0.5vw;
+}
+
+.add {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.35vw;
+}
+
+#final {
+    position: relative;
+    display: grid;
+    grid-template-areas: 'label1 input1'
+                         'label2 input2'
+                         'cost cost'
+                         'lbEm email'
+                         'order order';
+    grid-row-gap: 0.0vw;
+    grid-column-gap: 2vw;
+}
+
+
+
+.c {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2vw;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+
+#final input {
+    width: 25vw;
+    margin-bottom: 1.2vw;
+}
+
+.del {
+    padding: 0.3vw;
+    height: fit-content;
+}
+
+#icon-del {
+
+}
+
+.ner {
+
+}
+
+
+
