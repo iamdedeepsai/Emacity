@@ -248,7 +248,7 @@ body {
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     .button-67 {
         padding: 1vw;
     }
@@ -264,4 +264,94 @@ body {
     width: 80vw;
     height: 80vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#form {
+    width: inherit;
+    display: grid;
+    grid-template-areas: "side1 side2";
+}
+
+.side {
+    position: absolute;
+    width: 40%;
+}
+
+#side1 {
+    left: 0;
+    text-align: center;
+}
+
+#side2 {
+    right: 0;
+    margin-right: 3.3vw;
+}
+
+
+#ret {
+    margin-top: 1.2vw;
+    padding: 0.5vw 1vw;
+    width: 80%;
+}
+
+select#ret {
+    outline: none;
+    border: none;
+}
+
+#ret::selection {
+    border: none;
+}
+
+#images {
+    justify-content: center;
+    margin-top: 2vw;
+    margin-left: 2vw;
+}
+
+lord-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6vw;
+    height: 6vw
+}
+
+@media screen and (min-width: 1200px) {
+    lord-icon {
+        width: 6vh;
+        height: 6vh;
+    }
+}
+
+#view {
+    transition-duration: 3s;
+}
+
+@media screen and (max-width: 1000px) {
+    #view {
+        margin-left: -5vw;
+    }
+}
+
+#image2 {
+    margin-top: 4vw;
+    display: none;
+    width: 40vw;
+}
+
+@media screen and (max-width: 1000px) {
+    #image2 {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #image2 {
+        width: 20vw;
+    }
+}
+
+#final button {
+    width: 100%;
 }

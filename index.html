@@ -13,6 +13,7 @@
   <meta property="og:image" content="">
 
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image" href="/assets/img.png">
 
   <meta name="theme-color" content="#fafafa">
 
@@ -120,17 +121,41 @@
   </div>
 
   <div id="popup">
-    <form>
-      <h1>Preorder</h1>
+    <a onclick="document.getElementById('popup').style.display = 'none'"><lord-icon
+            src="https://cdn.lordicon.com/jfhbogmw.json"
+            trigger="hover"
+            colors="primary:#121331"
+            state="hover-1">
+    </lord-icon></a>
+    <form id="form">
+      <div id="side1" style="grid-area: side1;">
+        <select onchange="change()" id="ret" class="button-67">
+          <option>AirEm</option>
+          <option>WaterEm</option>
+        </select>
 
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" id="email" required>
+        <div id="images" class="side">
+          <img id="image1" src="assets/airem.png" alt="AirEm" style="width: 40vw;">
+          <img id="image2" src="assets/waterem.png" alt="WaterEm">
+        </div>
+      </div>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" id="psw" required>
+      <div id="side2" style="grid-area: side2;" class="side">
+        <div id="view">
+          <h1 id="model">Model: AirEm</h1>
+          <h2 id="cost">Upfront cost: $99</h2>
+          <h2 id="sub">Subscription cost: $19/monthly</h2>
+          <div id="final">
+            <button type="submit" class="button-67">Order</button>
+          </div>
+        </div>
 
-      <button type="submit" class="button-67">Login</button>
-      <button type="button" class="button-67" onclick="document.getElementById('popup').style.display = 'none'">Close</button>
+
+      </div>
+
+      <!--<a class="button-67" onclick="document.getElementById('popup').style.display = 'none'">Close</a>-->
+
+      <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
     </form>
   </div>
 
@@ -138,7 +163,7 @@
     <h2 class="text">CONTACT US</h2>
     <p><i class="fa fa-envelope" aria-hidden="true" style="font-size: 110%; grid-area: text1"></i> <a href="mailto: emacitysg@hotmail.com">emacitysg@hotmail.com</a></p>
     <p><i class="fa fa-phone" aria-hidden="true" style="font-size: 110%; grid-area: text2"></i> <a href="tel: +65 8925 3285">+65 8925 3285</a></p>
-    <p><i class="fa fa-instagram" style="font-size: 110%; grid-area: text3"></i> <a href="">emacity.sg</a></p>
+    <p><i class="fa fa-instagram" style="font-size: 110%; grid-area: text3"></i> <a href="">emacity_sg</a></p>
   </div>
 
 
