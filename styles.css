@@ -357,7 +357,7 @@ body, html {
     display: none;
     position: fixed;
     left: 10vw;
-    bottom: 7vh;
+    top: 8vh;
     border-radius: 1vw;
     background-color: rgba(200, 200, 200, 0.9);
     width: 80vw;
@@ -371,7 +371,7 @@ body, html {
     grid-template-areas: "side1 side2";
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     #form {
         grid-template-areas: 'side1'
                              'side2';
@@ -390,15 +390,15 @@ body, html {
         width: 65vw;
         border-radius: 20px;
         top: 25vw;
-        padding: 3vw;
+        padding: 1vw 3vw 3vw;
     }
 
     #view h1 {
-        font-size: 6vw;
+        font-size: 2.5vh;
     }
 
     #view h2 {
-        font-size: 4vw;
+        font-size: 1.6vh;
     }
 
     #final {
@@ -411,7 +411,7 @@ body, html {
     }
 
     #final h2 {
-        font-size: 4vw;
+        font-size: 1.7vh;
     }
 
     #side2 {
