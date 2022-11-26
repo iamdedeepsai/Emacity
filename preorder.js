@@ -38,10 +38,23 @@ function addNo(n) {
     let num = parseInt(document.getElementById(n).value);
 
     if (isNaN(num)) {
+        document.getElementById(n).value = 0;
+        switch (n) {
+            case "quantityA":
+                airem = 0;
+                cost = 99 * airem + 149 * waterem;
+                break;
+            case "quantityW":
+                waterem = 0;
+                cost = 99 * airem + 149 * waterem;
+                break;
+        }
+        document.getElementById('total').innerText = "Total cost: $" + cost;
         return;
     }
 
     if (num < 0) {
+        document.getElementById(n).value = 0;
         console.log(num <= 0);
         return;
     }
@@ -61,6 +74,16 @@ function addNo(n) {
 }
 
 function ord() {
+    let a = document.getElementById('quantityA');
+    let b = document.getElementById('quantityW');
+    let c = document.getElementById('email');
+
+    if (parseInt(a.value) === 0 && parseInt(b.value) === 0) {
+        return;
+    } else if (c.value === "") {
+        return
+    }
+
     $.ajax({
         url:'https://api.apispreadsheets.com/data/0SJQBMU4880uFYYx/',
         type:'post',
