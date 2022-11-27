@@ -38,7 +38,6 @@ function addNo(n) {
     let num = parseInt(document.getElementById(n).value);
 
     if (isNaN(num)) {
-        document.getElementById(n).value = 0;
         switch (n) {
             case "quantityA":
                 airem = 0;
@@ -89,10 +88,10 @@ function ord() {
         type:'post',
         data:$("#form").serializeArray(),
         success: function(){
-            alert("Form Data Submitted :)")
+            custombg5();
         },
         error: function(){
-            alert("There was an error :(")
+            custombg4();
         }
     });
     cls();

@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script src="preorder.js"></script>
+  <script src="notif.js"></script>
   <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -129,7 +130,7 @@
             colors="primary:#121331"
             state="hover-1">
     </lord-icon></a>
-    <form id="form" action="#store">
+    <form id="form" action="javascript:void(0);" >
       <div id="side1" style="grid-area: side1;">
         <select onchange="change()" id="ret" class="button-67">
           <option>AirEm</option>
@@ -154,10 +155,10 @@
 
         <div id="final" class="c">
           <label for="quantityA">AirEm:</label>
-          <input name="AirEm" type="number" class="button-67" id="quantityA" placeholder="Quantity" min="0" oninput="addNo('quantityA')">
+          <input required name="AirEm" type="number" class="button-67" id="quantityA" placeholder="Quantity" min="0" oninput="addNo('quantityA')">
 
           <label for="quantityW">WaterEm:</label>
-          <input name="WaterEm" type="number" class="button-67" id="quantityW" placeholder="Quantity" oninput="addNo('quantityW')" min="0">
+          <input required name="WaterEm" type="number" class="button-67" id="quantityW" placeholder="Quantity" oninput="addNo('quantityW')" min="0">
 
           <!--<div id="grp1" style="display: none" class="ner">
             <h2 id="aem">AirEm ×</h2>
@@ -182,8 +183,8 @@
 
           <h2 id="total" style="grid-area: cost">Total cost: $0</h2>
           <label for="email" id="lbEm" >Email:</label>
-          <input name="email" type="email" class="button-67" placeholder="Enter email " id="email" style="grid-area: email;">
-          <button type="button" class="button-67" id="order" onclick="ord()" style="grid-area: order">Order</button>
+          <input required name="email" type="email" class="button-67" placeholder="Enter email " id="email" style="grid-area: email;">
+          <button type="submit" class="button-67" id="order" onclick="ord()" style="grid-area: order">Order</button>
         </div>
 
 
