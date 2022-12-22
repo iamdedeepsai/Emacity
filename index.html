@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Emacity</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image" href="/assets/img.png">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@700&family=Italiana&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="preorder.js"></script>
+  <script src="notif.js"></script>
+  <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"
+          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+          crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a class="active">Emacity</a>
+    <a href="#home" class="normie">Home</a>
+    <a href="#airem" class="normie">Store</a>
+    <a href="#contact" class="normie">Contact Us</a>
+    <a href="#about" class="normie">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div id="home">
+    <div class="main">
+      <h1 id="tag">More than just a purifier.</h1>
+      <img id="img" src="assets/img.png">
+    </div>
+    <p>Empowering clean air and water. For everyone</p>
+  </div>
+
+  <div id="#store" class="shop">
+    <div id="airem">
+      <div class="card">
+        <h2 class="tit">AirEm</h2>
+        <img src="assets/airem.png">
+        <div class="specs">
+          <span class="material-symbols-outlined" style="grid-area: icon1">check_circle</span>
+          <span class="material-symbols-outlined" style="grid-area: icon2">straighten</span>
+          <p id="spec1" class="txt" style="grid-area: t1">Filters 95% of PM-10 particles and 80% of all PM-2.5 particles</p>
+          <p id="spec2" class="txt" style="grid-area: t2">90.7 cm</p>
+          <span class="material-symbols-outlined" style="grid-area: icon3">weight</span>
+          <span class="material-symbols-outlined" style="grid-area: icon4">recycling</span>
+          <p id="spec3" class="txt" style="grid-area: t3">Portable at only 5kg</p>
+          <p id="spec4" class="txt" style="grid-area: t4">Replaceable and biodegradable water filter</p>
+          <button class="preorder button-67" onclick="document.getElementById('popup').style.display = 'block'" style="grid-area: btn">Preorder</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="waterem">
+      <div class="card">
+        <h2 class="tit">WaterEm</h2>
+        <img src="assets/waterem.png">
+        <div class="specs">
+          <span class="material-symbols-outlined" style="grid-area: icon1">inventory_2</span>
+          <span class="material-symbols-outlined" style="grid-area: icon2">nest_cam_magnet_mount</span>
+          <p id="spec5" class="txt" style="grid-area: t1">10” housing</p>
+          <p id="spec6" class="txt" style="grid-area: t2">Mountable</p>
+          <span class="material-symbols-outlined" style="grid-area: icon3">filter_alt</span>
+          <span class="material-symbols-outlined" style="grid-area: icon4">thumb_up</span>
+          <p id="spec7" class="txt" style="grid-area: t3">Graphene Oxide Filter membrane.</p>
+          <p id="spec8" class="txt" style="grid-area: t4">Filters 99.9% of all contaminants, bacteria and viruses</p>
+          <button class="preorder button-67" onclick="document.getElementById('popup').style.display = 'block'" style="grid-area: btn">Preorder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about">
+    <div id="abt">
+      <div class="titcard" id="b">
+        <h1 style="font-family: 'Fredericka the Great', cursive;">Our vision</h1>
+        <p style="text-align: justify; font-family: Cavalcade,serif; font-size: 20px;">
+          Ever since the start of the 20th century, air and water insecurity has become the elephant in
+          the room for the United Nations and other non-profit organisations. Diseases such as Malaria,
+          Cholera, Typhoid etc have destroyed societies and tormented multiple nations. Cholera affects
+          approximately 2.9 million people yearly, leading to 95,000 deaths worldwide mainly in low- and
+          middle-income countries. In Africa alone, 40 million people live in cholera-endemic areas with
+          a risk of frequent outbreaks. We thus want to find a way to reach out to these rural and
+          undeveloped corners of the world and aid them in getting the same privilege as the average urban
+          individual.</p>
+      </div>
+    </div>
+
+    <div id="team">
+      <div class="titcard" id="a">
+        <h1 style="grid-area: header">Meet the team</h1>
+        <img src="assets/hehehehaw.png" style="width: 96%; grid-area: image; margin: 0% 2%;">
+        <p style="grid-area: t1; float: right">Dedeep Sai</p>
+        <p style="grid-area: t2">Abhilash Joshi</p>
+        <p style="grid-area: t3; float: left">Bhatia Priyansh</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup">
+    <a onclick="cls()"><lord-icon
+            id="close"
+            src="https://cdn.lordicon.com/jfhbogmw.json"
+            trigger="hover"
+            colors="primary:#121331"
+            state="hover-1">
+    </lord-icon></a>
+    <form id="form" action="javascript:void(0);" >
+      <div id="side1" style="grid-area: side1;">
+        <select onchange="change()" id="ret" class="button-67">
+          <option>AirEm</option>
+          <option>WaterEm</option>
+        </select>
+
+        <div id="images" class="side">
+          <img id="image1" src="assets/airem.png" alt="AirEm">
+          <img id="image2" src="assets/waterem.png" alt="WaterEm">
+        </div>
+      </div>
+
+      <!-- todo: add option for subscription -->
+
+      <div id="side2" style="grid-area: side2;" class="side">
+        <!-- todo: option for subscription -->
+        <div id="view" class="c">
+          <h1 id="model" style="text-align: center">Model: AirEm</h1>
+          <h2 id="cost">Upfront cost: $119</h2>
+          <h2 id="sub">Subscription cost: $9/monthly</h2>
+        </div>
+
+        <div id="final" class="c">
+          <label for="quantityA">AirEm:</label>
+          <input name="AirEm" type="number" class="button-67" id="quantityA" placeholder="Quantity" min="0" oninput="addNo('quantityA')">
+
+          <label for="quantityW">WaterEm:</label>
+          <input name="WaterEm" type="number" class="button-67" id="quantityW" placeholder="Quantity" oninput="addNo('quantityW')" min="0">
+
+          <!--<div id="grp1" style="display: none" class="ner">
+            <h2 id="aem">AirEm ×</h2>
+            <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+            <button class="button-67 del" onclick="del('AirEm')"><lord-icon
+                    id="icon-del"
+                    src="https://cdn.lordicon.com/jmkrnisz.json"
+                    trigger="morph"
+                    state="morph-fill">
+            </lord-icon></button>
+          </div>
+          <div id="grp2" style="display: none" class="ner">
+            <h2 id="wem">WaterEm ×</h2>
+            <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+            <button class="button-67 del" onclick="del('AirEm')"><lord-icon
+                    id="icon-del"
+                    src="https://cdn.lordicon.com/jmkrnisz.json"
+                    trigger="morph"
+                    state="morph-fill">
+            </lord-icon></button>
+          </div>-->
+
+          <h2 id="total" style="grid-area: cost">Total cost: $0</h2>
+          <label for="email" id="lbEm" >Email:</label>
+          <input required name="email" type="email" class="button-67" placeholder="Enter email " id="email" style="grid-area: email;">
+          <button type="submit" class="button-67" id="order" onclick="ord()" style="grid-area: order">Order</button>
+        </div>
+
+
+      </div>
+
+      <!--<a class="button-67" onclick="document.getElementById('popup').style.display = 'none'">Close</a>-->
+    </form>
+  </div>
+
+  <div id="contact">
+    <!-- todo: use better icons -->
+
+    <h2 class="text">CONTACT US</h2>
+    <a target="_blank" href="mailto: emacitysg@hotmail.com"><i class="fa fa-envelope" aria-hidden="true" style="font-size: 110%; grid-area: text1"></i> <p>emacitysg@hotmail.com</p></a>
+    <a target="_blank" href="tel: +65 89253285"><i class="fa fa-phone" aria-hidden="true" style="font-size: 110%; grid-area: text2"></i> <p>+65 8925 3285</p></a>
+    <a target="_blank" href="https://instagram.com/emacity_sg?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram" style="font-size: 110%; grid-area: text3"></i> <p>emacity_sg</p></a>
+  </div>
+
+
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
